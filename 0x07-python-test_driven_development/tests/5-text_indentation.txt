@@ -8,20 +8,20 @@ Import module:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Test no delim:
-    >>> text_indentation("Hello Holberton")
-    Hello Holberton
+    >>> text_indentation("Hello Alx")
+    Hello Alx
 
 Test string with spaces:
-    >>> text_indentation("Holberton          ")
-    Holberton
+    >>> text_indentation("Alx          ")
+    Alx
 
 Test string with spaces 2:
-    >>> text_indentation("        Holberton")
-    Holberton
+    >>> text_indentation("        Alx")
+    Alx
     
 Test string with spaces 3:
-    >>> text_indentation("        Holberton          ")
-    Holberton
+    >>> text_indentation("        Alx          ")
+    Alx
     
 Test string with empty string:
     >>> text_indentation("")
@@ -30,10 +30,10 @@ Test string with empty string 2:
     >>> text_indentation("      ")
 
 Test simple:
-    >>> text_indentation("Hello: Holberton")
+    >>> text_indentation("Hello: Alx")
     Hello:
     <BLANKLINE>
-    Holberton
+    Alx
 
 Test delims with spaces:
     >>> text_indentation("      ?:  :  ")
@@ -59,32 +59,32 @@ Test newline 3:
     <BLANKLINE>
 
 Test all delimeters:
-    >>> text_indentation("Hello: Holberton? school. fooo")
+    >>> text_indentation("Hello: Alx? SEProgram. fooo")
     Hello:
     <BLANKLINE>
-    Holberton?
+    Alx?
     <BLANKLINE>
-    school.
+    SEProgram.
     <BLANKLINE>
     fooo
 
 Test all delimeters with spaces:
-    >>> text_indentation("Hello   :     Holberton    ?    school.    fooo")
+    >>> text_indentation("Hello   :     Alx    ?    SEProgram.    fooo")
     Hello:
     <BLANKLINE>
-    Holberton?
+    Alx?
     <BLANKLINE>
-    school.
+    SEProgram.
     <BLANKLINE>
     fooo
 
 Test all delimeters with spaces at end:
-    >>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
+    >>> text_indentation("Hello   :     Alx    ?    SEProgram.    fooo     ")
     Hello:
     <BLANKLINE>
-    Holberton?
+    Alx?
     <BLANKLINE>
-    school.
+    SEProgram.
     <BLANKLINE>
     fooo
 
