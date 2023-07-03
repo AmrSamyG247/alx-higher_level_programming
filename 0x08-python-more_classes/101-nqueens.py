@@ -33,6 +33,7 @@ def checkBoard(board, col):
             board[col] = row
             checkBoard(board, col + 1)
 
+
 if __name__ == "__main__":
     import sys
 
@@ -50,3 +51,4 @@ if __name__ == "__main__":
         sys.exit(1)
     board = [0 for col in range(n)]
     checkBoard(board, 0)
+
