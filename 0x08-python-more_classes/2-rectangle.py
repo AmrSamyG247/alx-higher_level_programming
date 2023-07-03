@@ -3,7 +3,22 @@
 
 
 class Rectangle:
-    '''This class defines a simple Rectangle.'''
+    """
+    Defines class rectangle with private attribute width and height
+
+    Args:
+        width (int): width
+        height (int): height
+
+    Functions:
+        __init__(self, width, height)
+        width(self)
+        width(self, value)
+        height(self)
+        height(self, value)
+        area(self)
+        perimeter(self)
+    """
 
     def __init__(self, width=0, height=0):
         '''Constructor.
