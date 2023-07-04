@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''Module for LockedClass.'''
+
 
 class LockedClass:
-    __slots__ = ['first_name']
+    '''A class demonstrating locked slots.'''
+    __slots__ = 'first_name',
