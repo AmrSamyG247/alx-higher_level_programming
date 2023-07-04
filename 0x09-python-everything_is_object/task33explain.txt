@@ -1,0 +1,9 @@
+Python caches integers in the range [-5, 256]. It is expected that integers in that range are also identical. It means that Python keeps an array of integer objects for “all integers between -5 and 256” (262 int objects). 
+
+When we create an int in that range, we just get a reference to the existing object in memory. These numbers were chosen for the range because they are most commonly used integers. This structure is used to access these integers fast.
+
+In the source code for the Python int object, there are macros defined. They are called NSMALLPOSINTS and NSMALLNEGINTS and get allocated right when you initialize your NSMALLPOSINTS and NSMALLNEGINTS.
+
+If we set a = 125, we are actually performing a search in the integer block for the value in the range -5 to +257. Once a falls out of the scope of this range, it will be destroyed and be an entirely different object. The process of creating a new integer object and then destroying it immediately creates a lot of useless calculation cycles, so Python preallocated a range of commonly used integers.
+
+So, 262 (from -5 to 256) int objects have been created and are still in memory before execution of line 2.
