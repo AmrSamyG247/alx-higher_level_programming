@@ -3,5 +3,7 @@
 
 
 class LockedClass:
-    '''A class demonstrating locked slots and prevents user from dynamically creating new instance attributes.'''
+    '''A class demonstrating locked slots prevents creating attributes.'''
     __slots__ = 'first_name',
+
+
