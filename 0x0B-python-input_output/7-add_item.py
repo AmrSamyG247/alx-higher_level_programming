@@ -5,6 +5,7 @@
 
 import sys
 import json
+import os.path
 
 args = sys.argv[1:]
 
